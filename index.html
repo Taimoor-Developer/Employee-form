@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    
+        body {
+            box-sizing: border-box;
+            background-color: lightgray;
+            
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(5, 75, 118, 0.169);
+            border-radius: 10px;
+        }
+
+        fieldset {
+            padding: 20px;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        legend {
+            font-size: 30px;
+        }
+
+        input {
+            background-color: rgba(119, 136, 153, 0.502);
+            border: none;
+            border-radius: 6px;
+            padding: 6px;
+            margin: 8px;
+        }
+        
+
+        textarea {
+            background-color: rgba(119, 136, 153, 0.502);
+            border: none;
+            border-radius: 6px;
+            padding: 6px;
+            margin: 8px;
+            width: 93%;
+            height: 20px;
+        }
+
+        #name {
+            width: 21%;
+            margin-bottom: 20px;
+        }
+
+        #city,
+        #state,
+        #zip {
+            width: 24%;
+            margin-top: 20px;
+        }
+
+        #hpn,
+        #cpn {
+            width: 26.8%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #male,
+        #fmale,
+        #bd {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #left {
+            margin-left: 100px;
+        }
+
+        #education-details{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Information Form</h1>
+        <form action="https://www.example.com/login.php" method="POST">
+            <fieldset>
+                <legend>Employee Information</legend>
+
+                <div>
+                    <p>
+                        <label for="name">Full Name * </label>
+                        <input type="text" name="fullname" id="name" placeholder="first name" maxlength="10" required>
+
+                        <label for="prename">Prefered First Name * </label>
+                        <input type="text" name="prename" placeholder="syed taimoor" maxlength="5" id="prename"
+                            required>
+
+                        <label for="socialsecurity">Social Security *</label>
+                        <input type="number" maxlength="5" placeholder="12345" id="socialsecurity" required>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <label for="adress">Home Address (Street) *</label> <br>
+                        <textarea name="Address" id="adress" placeholder="Enter Your Address" required></textarea>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <lable for="city">City *</lable>
+                        <input type="text" placeholder="City Name" name="city" id="city" maxlength="8" required>
+
+                        <label for="state">State *</label>
+                        <input type="text" placeholder="State" name="state" id="state" maxlength="8" required>
+
+                        <label for="zip">Zip *</label>
+                        <input type="number" placeholder="234511" name="zip" id="zip" maxlength="6" required>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <label for="hpn">Home Phone Number</label>
+                        <input type="number" name="homephonenumber" id="hpn" required placeholder="+92342221190">
+
+                        <label for="cpn">Campus Phone Number</label>
+                        <input type="number" name="campusphonenumber" id="cpn" placeholder="+92342221190">
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <label for="cadress">Campus Address (Including Bidg .#) *</label> <br>
+                        <textarea name="Campus Address" id="cadress" placeholder="Enter Your Campus Address"
+                            required></textarea>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Gender * (select one)
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">male</label>
+
+                        <input type="radio" name="gender" id="fmale">
+                        <label for="fmale">femail</label>
+
+                        <label for="bd" id="left">Birth Date *</label>
+                        <input type="date" name="DOB" id="bd" required>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Citizenship (select one)*
+                        <input type="checkbox" name="citizen" id="ncitizen">
+                        <label for="ncitizen">Non-Citizen</label>
+
+                        <input type="checkbox" name="citizen" id="citizen">
+                        <label for="citizen">Citizen</label>
+
+                        <input type="checkbox" name="citizen" id="pr">
+                        <label for="pr">Permanent Resident</label>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Martal Status (select one)*
+                        <input type="checkbox" name="ms" id="dis">
+                        <label for="dis">Divorced</label>
+                        <input type="checkbox" name="ms" id="marr">
+                        <label for="marr">Married</label>
+                        <input type="checkbox" name="ms" id="wid">
+                        <label for="wid">Widowed</label>
+                        <input type="checkbox" name="ms" id="sin">
+                        <label for="sin">Single</label>
+                    </p>
+                </div>
+
+                <div id="education-details">
+                    <div>
+                        <p>
+                            Education (Please list only completed degree)
+                            <br>
+                            <input type="checkbox" name="school" id="hs">
+                            High School
+                            <br>
+                            <label for="ins">Institution</label>
+                            <input type="text" name="institution" id="ins">
+                            <br>
+                            <label for="ins">Year Of Graduation</label>
+                            <input type="date" name="yofg" id="yofg">
+                            <br>
+                            <label for="st">City/State</label>
+                            <input type="text" name="state" id="st">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="association" id="as">
+                            Association Degree
+                            <br>
+                            <label for="ins">Institution</label>
+                            <input type="text" name="institution" id="ins">
+                            <br>
+                            <label for="ins">Year Of Graduation</label>
+                            <input type="date" name="yofg" id="yofg">
+                            <br>
+                            <label for="st">City/State</label>
+                            <input type="text" name="state" id="st">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="association" id="as">
+                            Bachelor's Degree
+                            <br>
+                            <label for="ins">Institution</label>
+                            <input type="text" name="institution" id="ins">
+                            <br>
+                            <label for="ins">Year Of Graduation</label>
+                            <input type="date" name="yofg" id="yofg">
+                            <br>
+                            <label for="st">City/State</label>
+                            <input type="text" name="state" id="st">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="association" id="as">
+                            Master's Degree
+                            <br>
+                            <label for="ins">Institution</label>
+                            <input type="text" name="institution" id="ins">
+                            <br>
+                            <label for="ins">Year Of Graduation</label>
+                            <input type="date" name="yofg" id="yofg">
+                            <br>
+                            <label for="st">City/State</label>
+                            <input type="text" name="state" id="st">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <input type="checkbox" name="association" id="as">
+                            Ph.D.
+                            <br>
+                            <label for="ins">Institution</label>
+                            <input type="text" name="institution" id="ins">
+                            <br>
+                            <label for="ins">Year Of Graduation</label>
+                            <input type="date" name="yofg" id="yofg">
+                            <br>
+                            <label for="st">City/State</label>
+                            <input type="text" name="state" id="st">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
